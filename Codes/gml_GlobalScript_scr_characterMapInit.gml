@@ -1,0 +1,23 @@
+global.skill_tokens = [0, 0]
+global.combat_skill_token = 0
+global.utility_skill_token = 1
+global.skill_map_type = ds_map_create()
+ds_map_add(global.skill_map_type, global.swords_tier1, global.combat_skill_token)
+ds_map_add(global.skill_map_type, global.axes_tier1, global.combat_skill_token)
+ds_map_add(global.skill_map_type, global.maces_tier1, global.combat_skill_token)
+ds_map_add(global.skill_map_type, global.daggers_tier1, global.combat_skill_token)
+ds_map_add(global.skill_map_type, global.bows_tier1, global.combat_skill_token)
+ds_map_add(global.skill_map_type, global.polearms_tier1, global.combat_skill_token)
+ds_map_add(global.skill_map_type, global.swords2h_tier1, global.combat_skill_token)
+ds_map_add(global.skill_map_type, global.greataxes_tier1, global.combat_skill_token)
+ds_map_add(global.skill_map_type, global.greatmaces_tier1, global.combat_skill_token)
+ds_map_add(global.skill_map_type, global.shields_tier1, global.combat_skill_token)
+ds_map_add(global.skill_map_type, global.staves_tier1, global.combat_skill_token)
+ds_map_add(global.skill_map_type, global.pyromancy_tier1, global.combat_skill_token)
+ds_map_add(global.skill_map_type, global.geomancy_tier1, global.combat_skill_token)
+ds_map_add(global.skill_map_type, global.electromancy_tier1, global.combat_skill_token)
+ds_map_add(global.skill_map_type, global.athletics_tier1, global.utility_skill_token)
+ds_map_add(global.skill_map_type, global.combat_tier1, global.utility_skill_token)
+ds_map_add(global.skill_map_type, global.dualwield_tier1, global.utility_skill_token)
+ds_map_add(global.skill_map_type, global.magic_mastery_tier1, global.utility_skill_token)
+ds_map_add(global.skill_map_type, global.armor_tier1, global.utility_skill_token)
