@@ -2,7 +2,7 @@
 topic1
 _mod_cc_training
 
-_mod_cc_training_weaponry /scr_npc_check_combat
+_mod_cc_training_weaponry/scr_npc_check_combat
 
 topic2
 _mod_cc_training_sorcery/scr_npc_check_combat
@@ -19,10 +19,10 @@ topic0
 topic0
 _mod_cc_greetings
 
-_mod_cc_greeting_free_skill/scr_npc_can_study_skinning_and_set_bed
+_mod_cc_greeting_free_skill/scr_npc_can_study_skinning_and_set_bed
 
 topic5
-_mod_cc_greeting_teach_combat/scr_npc_check_token
+_mod_cc_greeting_teach_combat/scr_npc_check_token
 
 topic1
 _mod_cc_greeting_end
@@ -74,7 +74,7 @@ topic1
 topic5
 _mod_cc_greeting_free_skill_lore
 
-_mod_cc_greeting_free_skill_accept/scr_npc_can_study_set_bed
+_mod_cc_greeting_free_skill_accept/scr_npc_can_study_set_bed
 
 topic6
 _mod_cc_greeting_free_skill_end

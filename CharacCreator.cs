@@ -138,6 +138,12 @@ public class CharacCreator : Mod
             .ReplaceBy(ModFiles, "gml_Object_o_dataLoader_Other_10.gml")
             .Save();
 
+        // add more AP to compensate
+        Msl.LoadGML("gml_GlobalScript_scr_characterMapInit")
+            .MatchFrom("OldXP") // match the 2 lines below the moment I found OldXP
+            .InsertBelow("ds_map_add(global.characterDataMap, \"AP\", 3)") // replace by the code in that file
+            .Save(); // save it back
+
         // add new globals
         Msl.LoadGML("gml_GlobalScript_scr_characterMapInit")
             .MatchFrom("global.timeLevel = 0")
