@@ -144,10 +144,18 @@ public class CharacCreator : Mod
             .InsertBelow("ds_map_add(global.characterDataMap, \"AP\", 3)") // replace by the code in that file
             .Save(); // save it back
 
-        // add new globals
+        // add new globals for the game
+        Msl.LoadGML("gml_GlobalScript_scr_sessionDataInit")
+            .MatchFrom("}")
+            .InsertBelow(ModFiles, "gml_GlobalScript_scr_sessionDataInit.gml")
+            .Save();
+            
+        // add new globals for the player
         Msl.LoadGML("gml_GlobalScript_scr_characterMapInit")
-            .MatchFrom("global.timeLevel = 0")
-            .InsertBelow(ModFiles, "gml_GlobalScript_scr_characterMapInit.gml")
+            .MatchFrom("global.characterDataMap =")
+            .InsertBelow(ModFiles, "gml_GlobalScript_scr_characterMapInit_before.gml")
+            .MatchFrom("\"Willpower25\"")
+            .InsertBelow(ModFiles, "gml_GlobalScript_scr_characterMapInit_after.gml")
             .Save();
 
         // utility functions

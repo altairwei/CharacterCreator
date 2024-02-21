@@ -10,9 +10,12 @@ ds_list_clear(myfloor_list)
 ds_list_add(myfloor_list, "T1", "T1", "T1", "T1")
 myfloor_counter = "T1"
 myfloor = "T1"
+time_period_morning = do_animation
+time_period_day = do_animation
+time_period_evening = do_animation
+time_period_night = do_animation
 scr_set_hl()
 show_town = 0
-ai_script = gml_Script_scr_enemy_choose_state
 idle_state = 0
 rumors = 0
 chat = 1

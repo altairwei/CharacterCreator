@@ -63,7 +63,7 @@ function scr_npc_can_study_branch_trainer(argument0) //gml_Script_scr_npc_can_st
     }
 
     var _type = ds_map_find_value(global.skill_map_type, _tier)
-    if (__is_undefined(_type) || (global.skill_tokens[_type] >= 2))
+    if (__is_undefined(_type) || (ds_map_find_value(global.skill_tokens, _type) >= 2))
         return 0;
     if ((_tier != -4))
         return scr_skill_branch_can_study(_tier);
