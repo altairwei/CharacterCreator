@@ -48,6 +48,10 @@ If you encountered some troubles while trying to patch your game, first check if
 
 Then you can contact me on [Discord](https://discord.com/users/200330865522376704), and send me the latest log file found in `MSL/logs`.
 
+## Contributions and Thanks
+
+- `N` was the initial author of this mod, with his blessing I ported the mod on MSL.
+
 ## See also
 
 Other mods I've made:
