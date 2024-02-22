@@ -14,7 +14,7 @@ public class CharacCreator : Mod
     public override string Author => "zizani";
     public override string Name => "Character Creator";
     public override string Description => "Create the character you ever wanted to play !";
-    public override string Version => "1.0.0.0";
+    public override string Version => "1.1.0.0";
     public override string TargetVersion => "0.8.2.10";
 
     public override void PatchMod()
