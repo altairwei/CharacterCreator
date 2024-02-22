@@ -140,8 +140,8 @@ public class CharacCreator : Mod
 
         // add more AP to compensate
         Msl.LoadGML("gml_GlobalScript_scr_characterMapInit")
-            .MatchFrom("OldXP") // match the 2 lines below the moment I found OldXP
-            .InsertBelow("ds_map_add(global.characterDataMap, \"AP\", 3)") // replace by the code in that file
+            .MatchFrom("ds_map_add(global.characterDataMap, \"SP\", 2)")
+            .InsertBelow("ds_map_replace(global.characterDataMap, \"AP\", ds_map_find_value(global.characterDataMap, \"AP\") + 3)") // add 3 SP at start (AP ig is SP in code)
             .Save(); // save it back
 
         // add new globals for the game
@@ -157,16 +157,26 @@ public class CharacCreator : Mod
             .MatchFrom("\"Willpower25\"")
             .InsertBelow(ModFiles, "gml_GlobalScript_scr_characterMapInit_after.gml")
             .Save();
-
+        
         // utility functions
-        Msl.AddFunction(ModFiles.GetCode("scr_npc_can_study_branch_trainer.gml"), "scr_npc_can_study_branch_trainer");
-        Msl.AddFunction(ModFiles.GetCode("scr_npc_can_study_set_bed.gml"), "scr_npc_can_study_set_bed");
-        Msl.AddFunction(ModFiles.GetCode("scr_npc_check_combat.gml"), "scr_npc_check_combat");
-        Msl.AddFunction(ModFiles.GetCode("scr_npc_check_level.gml"), "scr_npc_check_level");
-        Msl.AddFunction(ModFiles.GetCode("scr_npc_check_token.gml"), "scr_npc_check_token");
-        Msl.AddFunction(ModFiles.GetCode("scr_npc_check_utility.gml"), "scr_npc_check_utility");
-        Msl.AddFunction(ModFiles.GetCode("scr_skill_branch_study_dialogue_trainer.gml"), "scr_skill_branch_study_dialogue_trainer");
-        Msl.AddFunction(ModFiles.GetCode("scr_unlock_set_bed.gml"), "scr_unlock_set_bed");
+        string[] functionNames = {
+            "scr_npc_can_study_branch_trainer",
+            "scr_npc_can_study_set_bed",
+            "scr_npc_check_combat",
+            "scr_npc_check_level",
+            "scr_npc_check_token",
+            "scr_npc_check_utility",
+            "scr_skill_branch_study_dialogue_trainer",
+            "scr_unlock_set_bed"
+        };
+
+        foreach(string functionName in functionNames)
+        {
+            if (DataLoader.data.Code.FirstOrDefault(t => t.Name.Content == functionName) == null)
+            {
+                Msl.AddFunction(ModFiles.GetCode(functionName + ".gml"), functionName);
+            }
+        }
 
         // add trainer npc
         UndertaleGameObject npcTrainer = Msl.AddObject(
