@@ -1,8 +1,5 @@
 # Character Creation
 
-> [!CAUTION]
-> **This mod does not work with the current version of MSL (0.9)** 
-
 ## Description
 
 This mod remove all skill trees learnt by default on all characters and add a new npc in the starting tavern what can teach you any skill tree.
@@ -11,7 +8,7 @@ In details:
 - You can choose up to two skill trees from `Weaponry` and `Sorcery`.
 - You can choose up to two skill trees from `Utility`.
 - You start with all your stats at `10` but with an extra `3` to allocate wherever you want.
-- This npc can also teach you an extra.
+- This npc can also teach you an extra if you have enough gold.
 
 ## Installation
 
