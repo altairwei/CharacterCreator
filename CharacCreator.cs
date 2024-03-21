@@ -119,7 +119,7 @@ public class CharacCreator : Mod
                 sentence: "Me? Just a retired mercenary with decades of experience under my belt. Due to an injury, I can no longer work as one. Now spend my days teaching greenhorns how to survive in the wilderness and triumph on the battlefield. I can teach you how to survive in the wilderness as well, but not for free of course!"),
             new LocalizationSentence(
                 id: "_mod_cc_greeting_free_skill_accept",
-                sentence: "Teach me how to survive in the wilderness. [100 crowns]"),
+                sentence: "Teach me how to survive in the wilderness. [1000 crowns]"),
             new LocalizationSentence(
                 id: "_mod_cc_greeting_free_skill_end",
                 sentence: "Maybe next time!"),
@@ -160,14 +160,13 @@ public class CharacCreator : Mod
         
         // utility functions
         string[] functionNames = {
-            "scr_npc_can_study_branch_trainer",
-            "scr_npc_can_study_set_bed",
-            "scr_npc_check_combat",
-            "scr_npc_check_level",
-            "scr_npc_check_token",
-            "scr_npc_check_utility",
-            "scr_skill_branch_study_dialogue_trainer",
-            "scr_unlock_set_bed"
+            "scr_mod_cc_npc_can_study_branch_trainer",
+            "scr_mod_cc_npc_can_study_set_bed",
+            "scr_mod_cc_npc_check_combat",
+            "scr_mod_cc_npc_check_token",
+            "scr_mod_cc_npc_check_utility",
+            "scr_mod_cc_skill_branch_study_dialogue_trainer",
+            "scr_mod_cc_unlock_set_bed"
         };
 
         foreach(string functionName in functionNames)

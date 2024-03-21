@@ -1,4 +1,4 @@
-function scr_npc_can_study_branch_trainer(argument0) //gml_Script_scr_npc_can_study_branch_trainer
+function scr_mod_cc_npc_can_study_branch_trainer(argument0)
 {
     _tier = -4
     switch argument0

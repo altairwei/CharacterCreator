@@ -1,4 +1,4 @@
-function scr_npc_check_level(argument0) //gml_Script_scr_npc_check_level
+function scr_mod_cc_npc_check_level(argument0)
 {
     if ((scr_atr("LVL") > argument0))
     {

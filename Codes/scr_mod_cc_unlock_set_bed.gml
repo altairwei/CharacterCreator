@@ -1,4 +1,4 @@
-function scr_unlock_set_bed()
+function scr_mod_cc_unlock_set_bed()
 {
     with (o_skill_set_bed_ico)
     {
@@ -58,6 +58,7 @@ function scr_unlock_set_bed()
         scr_guiLayoutOffsetUpdate(id, _offsetLeft, _offsetTop)
     }
     audio_play_sound(snd_dialog_reward_window_st_1, 4, false)
-    scr_gold_write_off(100)
-    scr_characterGoldSpend("spentDialogues", 100)
+    var _price = 1000
+    scr_gold_write_off(_price)
+    scr_characterGoldSpend("spentDialogues", _price)
 }

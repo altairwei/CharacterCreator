@@ -1,4 +1,4 @@
-function scr_skill_branch_study_dialogue_trainer(argument0)
+function scr_mod_cc_skill_branch_study_dialogue_trainer(argument0)
 {
     _pos = argument0
     _skill = owner.skill_branch_array[_pos]
