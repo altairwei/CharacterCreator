@@ -119,7 +119,7 @@ public class CharacCreator : Mod
                 sentence: "Me? Just a retired mercenary with decades of experience under my belt. Due to an injury, I can no longer work as one. Now spend my days teaching greenhorns how to survive in the wilderness and triumph on the battlefield. I can teach you how to survive in the wilderness as well, but not for free of course!"),
             new LocalizationSentence(
                 id: "_mod_cc_greeting_free_skill_accept",
-                sentence: "Teach me how to survive in the wilderness. [1000 crowns]"),
+                sentence: "Teach me how to survive in the wilderness. ~y~[1000 crowns]~/~"),
             new LocalizationSentence(
                 id: "_mod_cc_greeting_free_skill_end",
                 sentence: "Maybe next time!"),
@@ -128,7 +128,10 @@ public class CharacCreator : Mod
                 sentence: "First of all, you will need a knife or any sharp weapon to harvest the pelt and meat. And if you're lucky, you'll also get a hunting trophy. Just remember to cook the meat at a campfire to avoid food poisoning. You could also make a bedroll out of the pelts, some rope, and straw."),
             new LocalizationSentence(
                 id: "_mod_cc_greeting_free_skill_thank",
-                sentence: "Thank you!")
+                sentence: "Thank you!"),
+            new LocalizationSentence(
+                id: "_mod_cc_greeting_free_skill_no_enougth_gold",
+                sentence: "*I should come back with more money*")
         );
         localizationDialog.InjectTable(); 
 
@@ -162,6 +165,7 @@ public class CharacCreator : Mod
         string[] functionNames = {
             "scr_mod_cc_npc_can_study_branch_trainer",
             "scr_mod_cc_npc_can_study_set_bed",
+            "scr_mod_cc_npc_not_enougth_gold_set_bed",
             "scr_mod_cc_npc_check_combat",
             "scr_mod_cc_npc_check_token",
             "scr_mod_cc_npc_check_utility",

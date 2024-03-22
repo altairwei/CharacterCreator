@@ -2,7 +2,7 @@
 
 ## Description
 
-This mod remove all skill trees learnt by default on all characters and add a new npc in the starting tavern what can teach you any skill tree.
+This mod remove all skill trees learnt by default on all characters and add a new npc in the starting tavern that can teach you any skill tree.
 
 In details:
 - You can choose up to two skill trees from `Weaponry` and `Sorcery`.
