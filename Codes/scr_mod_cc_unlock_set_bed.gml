@@ -16,7 +16,7 @@ function scr_mod_cc_unlock_set_bed()
     var num = ds_list_find_index(list, -4)
     if (num >= 0)
     {
-        with (scr_create_skill_on_start(o_skill_set_bed, num))
+        with (scr_create_skill_on_start(o_skill_set_bed_ico.child_skill, num))
         {
             onStart_create = 1
             event_user(8)
@@ -36,15 +36,15 @@ function scr_mod_cc_unlock_set_bed()
             num = ds_list_find_index(list, -4)
             if (num >= 0)
             {
-                ds_list_replace(list, num, 4088)
+                ds_list_replace(list, num, o_skill_set_bed_ico.child_skill)
                 break
             }
             else
                 _set_number++
         }
     }
-    var _sprite = o_skill_set_bed.sprite_index
-    var _name = o_skill_set_bed.name
+    var _sprite = o_skill_set_bed_ico.sprite_index
+    var _name = o_skill_set_bed_ico.name
     var _offsetLeft = ((global.cameraWidth / 2) - 109)
     var _offsetTop = ((global.cameraHeight / 2) - 140)
     with (scr_guiCreateSimple(global.guiBaseContainerVisible, o_skill_unlock_alert))
