@@ -2,7 +2,7 @@
 
 ## Description
 
-This mod remove all skill trees learnt by default on all characters and add a new npc in the starting tavern that can teach you any skill tree.
+This mod removes all skill trees learnt by default on all characters and adds a new npc in the starting tavern that can teach you any skill tree.
 
 In details:
 - You can choose up to two skill trees from `Weaponry` and `Sorcery`.
@@ -59,9 +59,14 @@ Other mods I've made:
     - [Speedshard_Skinning](https://github.com/remyCases/SpeedshardSkinning)
     - [Speedshard_MoneyDungeon](https://github.com/remyCases/SpeedshardMoneyDungeon)
     - [Speedshard_Stances](https://github.com/remyCases/SpeedshardStances)
+    - [Pelt Durability](https://github.com/remyCases/Stoneshard-PeltDurability)
+    - [MoreSaveSlots](https://github.com/remyCases/Stoneshard-MoreSaveSlots)
+    - [Defeat Scenarios](https://github.com/remyCases/Stoneshard-DefeatScenarios)
 
 - Shardpunk:
     - [Shardpunk-BiggerTeam](https://github.com/remyCases/Shardpunk-BiggerTeam)
+    - [Shardpunk-Faster](https://github.com/remyCases/Shardpunk-Faster)
+    - [Shardpunk-MoreSkillLevels](https://github.com/remyCases/Shardpunk-MoreSkillLevels)
 
 - Airship Kingdom Adrift:
     - [ProductionPanel](https://github.com/remyCases/AKAMod_ProdPanel)
