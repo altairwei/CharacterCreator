@@ -10,16 +10,18 @@ In details:
 - You start with all your stats at `10` but with an extra `3` to allocate wherever you want.
 - This npc can also teach you an extra if you have enough gold.
 
+If you play with the `Necromancy` mod, you will also have the choice to unlock the `Necromancy` skill tree.
+
 ## Installation
 
 Since this mod was made through MSL, you first need to install it and then patching the game with it.
-You can follow the official [installation guide](https://dddddragon.github.io/ModShardLauncher/guides/how-to-play-mod.html) on the MSL documentation.
+You can follow the official [installation guide](https://github.com/ModShardTeam/ModShardLauncher/guides/how-to-play-mod.html) on the MSL documentation.
 
 A [video](https://www.youtube.com/watch?v=_J0oJYGi38E&t=13s&ab_channel=Nylux) was made by Nylux to show how to install Neoconsole, if you prefer a video guide.
 
 ### Installing MSL
 
-- Download the latest release of [MSL](https://github.com/DDDDDragon/ModShardLauncher).
+- Download the latest release of [MSL](https://github.com/ModShardTeam/ModShardLauncher).
 - Unzip it.
 - **Move the `ModShard.dll` file to your Stoneshard folder.**
 - (Optional) Rename the data.win file in the Stoneshard folder with an other name so you'll have a backup if something went wrong.
