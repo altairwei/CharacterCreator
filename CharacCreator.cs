@@ -19,8 +19,56 @@ public class CharacCreator : Mod
 
     public override void PatchMod()
     {
+        Msl.AddCreditDisclaimerRoom(Name, Author);
+        
+        // find and store all skill trees
+        Msl.LoadGML("gml_Object_o_dataLoader_Other_10")
+            .MatchFrom("scr_skill_tier_init()")
+            .InsertBelow(@"global._cc_skill_map_type = ds_map_create();
+ds_map_add(global._cc_skill_map_type, ""swords_tier1"", 0)
+ds_map_add(global._cc_skill_map_type, ""axes_tier1"", 0)
+ds_map_add(global._cc_skill_map_type, ""maces_tier1"", 0)
+ds_map_add(global._cc_skill_map_type, ""daggers_tier1"", 0)
+ds_map_add(global._cc_skill_map_type, ""bows_tier1"", 0)
+ds_map_add(global._cc_skill_map_type, ""polearms_tier1"", 0)
+ds_map_add(global._cc_skill_map_type, ""swords2h_tier1"", 0)
+ds_map_add(global._cc_skill_map_type, ""greataxes_tier1"", 0)
+ds_map_add(global._cc_skill_map_type, ""greatmaces_tier1"", 0)
+ds_map_add(global._cc_skill_map_type, ""shields_tier1"", 0)
+ds_map_add(global._cc_skill_map_type, ""staves_tier1"", 0)
+ds_map_add(global._cc_skill_map_type, ""pyromancy_tier1"", 0)
+ds_map_add(global._cc_skill_map_type, ""geomancy_tier1"", 0)
+ds_map_add(global._cc_skill_map_type, ""electromancy_tier1"", 0)
+ds_map_add(global._cc_skill_map_type, ""athletics_tier1"", 1)
+ds_map_add(global._cc_skill_map_type, ""combat_tier1"", 1)
+ds_map_add(global._cc_skill_map_type, ""dualwield_tier1"", 1)
+ds_map_add(global._cc_skill_map_type, ""magic_mastery_tier1"", 1)
+ds_map_add(global._cc_skill_map_type, ""armor_tier1"", 1)
+ds_map_add(global._cc_skill_map_type, ""necromancy_tier1"", 1)
+
+var _cc_name_array = ds_map_keys_to_array(global._cc_skill_map_type);
+var _cc_name_array_length = array_length(_cc_name_array);
+var _cc_skillstier1_list = ds_list_create();
+for  (var _i = 0; _i < _cc_name_array_length; _i++)
+{
+if (variable_global_exists(_cc_name_array[_i]))
+{
+    ds_list_add(_cc_skillstier1_list, _cc_name_array[_i]);
+}
+}
+
+var _cc_skillstier1_list_size = ds_list_size(_cc_skillstier1_list);
+global._cc_skillstier1_array = array_create(_cc_skillstier1_list_size);
+for (var _i = 0; _i < _cc_skillstier1_list_size; _i++)
+{
+global._cc_skillstier1_array[_i] = ds_list_find_value(_cc_skillstier1_list, _i);
+}
+ds_list_destroy(_cc_skillstier1_list);
+")
+            .Save();
+
         // add some dialog lines
-        LocalizationDialog localizationDialog = new(
+        Msl.InjectTableDialogLocalization(
             new LocalizationSentence(
                 id: "_mod_cc_greetings",
                 sentence: "Hey, rookie! Need something?"),
@@ -115,6 +163,9 @@ public class CharacCreator : Mod
                 id: "_mod_cc_training_utility_mm",
                 sentence: "Learn about Magic Mastery"),
             new LocalizationSentence(
+                id: "_mod_cc_training_utility_necromancy",
+                sentence: "Learn about Occultism"),
+            new LocalizationSentence(
                 id: "_mod_cc_greeting_free_skill_lore",
                 sentence: "Me? Just a retired mercenary with decades of experience under my belt. Due to an injury, I can no longer work as one. Now spend my days teaching greenhorns how to survive in the wilderness and triumph on the battlefield. I can teach you how to survive in the wilderness as well, but not for free of course!"),
             new LocalizationSentence(
@@ -132,8 +183,7 @@ public class CharacCreator : Mod
             new LocalizationSentence(
                 id: "_mod_cc_greeting_free_skill_no_enougth_gold",
                 sentence: "*I should come back with more money*")
-        );
-        localizationDialog.InjectTable(); 
+        ); 
 
         // change current characters
         Msl.LoadGML("gml_Object_o_dataLoader_Other_10")
@@ -146,12 +196,6 @@ public class CharacCreator : Mod
             .MatchFrom("ds_map_add(global.characterDataMap, \"SP\", 2)")
             .InsertBelow("ds_map_replace(global.characterDataMap, \"AP\", ds_map_find_value(global.characterDataMap, \"AP\") + 3)") // add 3 SP at start (AP ig is SP in code)
             .Save(); // save it back
-
-        // add new globals for the game
-        Msl.LoadGML("gml_GlobalScript_scr_sessionDataInit")
-            .MatchFrom("}")
-            .InsertBelow(ModFiles, "gml_GlobalScript_scr_sessionDataInit.gml")
-            .Save();
             
         // add new globals for the player
         Msl.LoadGML("gml_GlobalScript_scr_characterMapInit")
@@ -188,44 +232,38 @@ public class CharacCreator : Mod
             parentName:"o_npc_baker",
             isVisible:true,
             isAwake:true,
-            collisionShapeFlags:UndertaleModLib.Models.CollisionShapeFlags.Circle
+            collisionShapeFlags:CollisionShapeFlags.Circle
         );
         
         npcTrainer.ApplyEvent(ModFiles,
-            new MslEvent("npc_trainer_create_0.gml", UndertaleModLib.Models.EventType.Create, 0)
+            new MslEvent("npc_trainer_create_0.gml", EventType.Create, 0)
         );
 
         // get the tavern room
-        UndertaleRoom room = Msl.GetRooms().First(t => t.Name.Content == "r_taverninside1floor");
+        UndertaleRoom room = Msl.GetRoom("r_taverninside1floor");
+        UndertaleRoom.Layer LayerTarget = Msl.GetLayer(room, UndertaleRoom.LayerType.Instances, "target");
+        UndertaleRoom.Layer LayerNPC = Msl.GetLayer(room, UndertaleRoom.LayerType.Instances, "NPC");
 
         // add a target marker
-        UndertaleRoom.Layer.LayerInstancesData targetInstances = room.Layers.First(t => t.LayerName.Content == "target").InstancesData;
-        UndertaleModLib.Models.UndertaleRoom.GameObject gameObjectTargetTrainer = new()
-        {
-            InstanceID = DataLoader.data.GeneralInfo.LastObj++,
-            X = 368,
-            Y = 312,
-            CreationCode = Msl.AddCode(ModFiles.GetCode("taverninside_101_create.gml"), "gml_RoomCC_r_taverninside1floor_101_Create"),
-            ObjectDefinition = Msl.GetObject("o_NPC_target")
-        };
-        room.GameObjects.Add(gameObjectTargetTrainer);
-        targetInstances.Instances.Add(gameObjectTargetTrainer);
-
+        UndertaleRoom.GameObject gameObjectTargetTrainer = room.AddGameObject(
+            LayerTarget, 
+            "o_NPC_target", 
+            Msl.AddCode(ModFiles.GetCode("taverninside_101_create.gml"), "gml_RoomCC_r_taverninside1floor_101_Create"),
+            x:368,
+            y:312
+        );
+        
         // save the target id and inject it in the creation code of the trainer
         uint tagertID = gameObjectTargetTrainer.InstanceID;
         string codeTrainer = string.Format(@ModFiles.GetCode("taverninside_100_create.gml"), tagertID);
 
         // create the trainer
-        UndertaleRoom.Layer.LayerInstancesData npcInstances = room.Layers.First(t => t.LayerName.Content == "NPC").InstancesData;
-        UndertaleModLib.Models.UndertaleRoom.GameObject gameObjectNpcTrainer = new()
-        {
-            InstanceID = DataLoader.data.GeneralInfo.LastObj++,
-            X = 376,
-            Y = 328,
-            CreationCode = Msl.AddCode(codeTrainer, "gml_RoomCC_r_taverninside1floor_100_Create"),
-            ObjectDefinition = npcTrainer
-        };
-        room.GameObjects.Add(gameObjectNpcTrainer);
-        npcInstances.Instances.Add(gameObjectNpcTrainer);
+        room.AddGameObject(
+            LayerNPC, 
+            "o_npc_trainer", 
+            Msl.AddCode(codeTrainer, "gml_RoomCC_r_taverninside1floor_100_Create"),
+            x:376,
+            y:328
+        );
     }
 }
