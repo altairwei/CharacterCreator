@@ -25,10 +25,13 @@ topic5
 _mod_cc_greeting_teach_combat/scr_mod_cc_npc_check_token
 
 topic1
+_mod_cc_greeting_respec
+
+topic7
 _mod_cc_greeting_end
 scr_close_dialog
 
-<de2_opt>142/254/34047/300
+<de2_opt>146/242/34047/300
 <topic_start>
 topic2
 _mod_cc_training_weaponry_choice
@@ -83,7 +86,7 @@ topic0
 _mod_cc_greeting_free_skill_end
 
 topic0
-<de2_opt>-325/-61/16760832/300
+<de2_opt>-324/-61/16760832/300
 <topic_start>
 topic3
 _mod_cc_training_utility_choice
@@ -135,3 +138,11 @@ _mod_cc_greeting_free_skill_thank
 
 topic0
 <de2_opt>122/60/16760832/300
+<topic_start>
+topic7
+_mod_cc_respec
+scr_mod_cc_reset_skills
+_mod_cc_greeting_free_skill_thank
+
+topic0
+<de2_opt>656/8/16777215/300
