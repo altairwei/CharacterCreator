@@ -14,7 +14,7 @@ public class CharacCreator : Mod
     public override string Author => "zizani";
     public override string Name => "Character Creator";
     public override string Description => "Create the character you ever wanted to play !";
-    public override string Version => "1.4.0";
+    public override string Version => "2.0.0";
     public override string TargetVersion => "0.8.2.10";
 
     public override void PatchMod()
@@ -65,59 +65,6 @@ for (var _i = 0; _i < _cc_skillstier1_list_size; _i++)
 global._cc_skillstier1_array[_i] = ds_list_find_value(_cc_skillstier1_list, _i);
 }
 ds_list_destroy(_cc_skillstier1_list);
-
-var metacategories = scr_array_add(
-    ""o_skill_category_sword"", 
-    ""o_skill_category_axe"", 
-    ""o_skill_category_mace"", 
-    ""o_skill_category_dagger"", 
-    ""o_skill_category_greatsword"", 
-    ""o_skill_category_greataxe"", 
-    ""o_skill_category_greatmauls"", 
-    ""o_skill_category_polearms"", 
-    ""o_skill_category_bows"", 
-    ""o_skill_category_shields"", 
-    ""o_skill_category_staves"", 
-    ""o_skill_category_wands"", 
-    ""o_skill_category_dual_wielding"", 
-    ""o_skill_category_survival"", 
-    ""o_skill_category_combat"", 
-    ""o_skill_category_athletics"", 
-    ""o_skill_category_mastery_of_magic"", 
-    ""o_skill_category_necromancy"", 
-    ""o_skill_category_basic_armor"", 
-    ""o_skill_category_alchemy"", 
-    ""o_skill_category_sabotage"",
-    ""o_skill_category_pyromancy"", 
-    ""o_skill_category_geomancy"", 
-    ""o_skill_category_electromancy"", 
-    ""o_skill_category_venomancy"", 
-    ""o_skill_category_cryomancy"", 
-    ""o_skill_category_astromancy"", 
-    ""o_skill_category_chronomancy"", 
-    ""o_skill_category_psymancy"", 
-    ""o_skill_category_arcanistics"");
-
-global._cc_skills_list = ds_list_create();
-
-for (var _i = 0; _i < array_length(metacategories); _i++)
-{
-    var _metacategory = asset_get_index(metacategories[_i]);
-    if (_metacategory > -1)
-    {
-        var _tmp_metacategory = instance_create_depth(-15000, -15000, 0, _metacategory);
-        var _tmp = _metacategory.skill;
-        instance_destroy(_tmp_metacategory);
-        
-        for (var _j = 0; _j < array_length(_tmp); _j++)
-        {
-            if (is_real(_tmp[_j]) && object_exists(_tmp[_j]))
-            {
-                ds_list_add(global._cc_skills_list, _tmp[_j]);
-            }
-        }
-    }
-}
 ")
             .Save();
 
