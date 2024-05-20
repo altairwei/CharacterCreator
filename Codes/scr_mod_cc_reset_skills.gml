@@ -7,9 +7,9 @@ function scr_mod_cc_reset_skills()
         if (id != o_skill_category_basic_skills.id)
         {
             var _size = array_length(skill)
-            for (var i = 0; i < _size; i++)
+            for (var _i = 0; _i < _size; _i++)
             {
-                with (skill[i])
+                with (skill[_i])
                 {
                     if (!is_enemy_skill)
                     {
@@ -25,14 +25,28 @@ function scr_mod_cc_reset_skills()
         }
     }
 
-    var _len_skills_on_panel = ds_list_size(o_skill_fast_panel.skills)
-    for (var _i = 0; i < _len_skills_on_panel; i++)
+    with (o_skill_fast_panel)
     {
-        var _curr_skill = ds_list_find_value(o_skill_fast_panel.skills, _i) 
-        if (_curr_skill != o_skill_trap_search)
+        var _len_skills_on_panel = ds_list_size(skills);
+        for (var _i = 0; _i < _len_skills_on_panel; _i++)
         {
-            ds_list_replace(o_skill_fast_panel.skills, _i, -4);
+            var _list = ds_list_find_value(o_skill_fast_panel.skills, _i);
+            var _len_list = ds_list_size(_list);
+            for (var _j = 0; _j < _len_list; _j++)
+            {
+                var _curr_skill = ds_list_find_value(_list, _j);
+                if (_curr_skill != o_skill_trap_search)
+                {
+                    ds_list_replace(_list, _j, -4);
+                }
+            }
         }
+    }
+    
+    with (o_skill)
+    {
+        if ((object_index != o_skill_trap_search))
+            instance_destroy()
     }
 
     scr_atr_incr("SP", _learned_skills);
