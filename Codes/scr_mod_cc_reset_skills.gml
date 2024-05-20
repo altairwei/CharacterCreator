@@ -4,7 +4,7 @@ function scr_mod_cc_reset_skills()
 
     with (o_skill_category)
     {
-        if (self != o_skill_category_basic_skills)
+        if (id != o_skill_category_basic_skills.id)
         {
             var _size = array_length(skill)
             for (var i = 0; i < _size; i++)
