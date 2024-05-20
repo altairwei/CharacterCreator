@@ -83,6 +83,9 @@ ds_list_destroy(_cc_skillstier1_list);
                 id: "_mod_cc_greeting_respec",
                 sentence: "I want to do things differently (respec option)."),
             new LocalizationSentence(
+                id: "_mod_cc_respec_asking_for_money",
+                sentence: "This is a pricey request !"),
+            new LocalizationSentence(
                 id: "_mod_cc_greeting_end",
                 sentence: "No thanks!"),
             new LocalizationSentence(
@@ -187,6 +190,12 @@ ds_list_destroy(_cc_skillstier1_list);
             new LocalizationSentence(
                 id: "_mod_cc_greeting_free_skill_no_enougth_gold",
                 sentence: "*I should come back with more money*"),
+            new LocalizationSentence(
+                id: "_mod_cc_respec_paying",
+                sentence: "I don't care how much it costs. ~y~[1000 crowns]~/~"),
+            new LocalizationSentence(
+                id: "_mod_cc_respec_ending",
+                sentence: "Nevermind."),
             new LocalizationSentence(
                 id: "_mod_cc_respec",
                 sentence: "Here you are !")

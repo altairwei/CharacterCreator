@@ -80,4 +80,7 @@ function scr_mod_cc_reset_skills()
     scr_atr_set("WIL", 10);
 
     scr_atr_calc(o_player);
+
+    var _price = 1000
+    scr_gold_write_off(_price)
 }
