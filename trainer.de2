@@ -67,6 +67,9 @@ topic1
 _mod_cc_training_utility_necromancy/scr_mod_cc_npc_can_study_branch_trainer/necromancy_tier1/
 scr_mod_cc_skill_branch_study_dialogue_trainer/necromancy_tier1
 topic1
+_mod_cc_training_utility_druidism/scr_mod_cc_npc_can_study_branch_trainer/druidism_tier1/
+scr_mod_cc_skill_branch_study_dialogue_trainer/druidism_tier1
+topic1
 custom_learn_exit
 
 

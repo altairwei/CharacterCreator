@@ -14,7 +14,7 @@ public class CharacCreator : Mod
     public override string Author => "zizani";
     public override string Name => "Character Creator";
     public override string Description => "Create the character you ever wanted to play !";
-    public override string Version => "2.0.0";
+    public override string Version => "2.1.0";
     public override string TargetVersion => "0.8.2.10";
 
     public override void PatchMod()
@@ -45,6 +45,7 @@ ds_map_add(global._cc_skill_map_type, ""dualwield_tier1"", 1)
 ds_map_add(global._cc_skill_map_type, ""magic_mastery_tier1"", 1)
 ds_map_add(global._cc_skill_map_type, ""armor_tier1"", 1)
 ds_map_add(global._cc_skill_map_type, ""necromancy_tier1"", 1)
+ds_map_add(global._cc_skill_map_type, ""druidism_tier1"", 1)
 
 var _cc_name_array = ds_map_keys_to_array(global._cc_skill_map_type);
 var _cc_name_array_length = array_length(_cc_name_array);
@@ -172,6 +173,9 @@ ds_list_destroy(_cc_skillstier1_list);
             new LocalizationSentence(
                 id: "_mod_cc_training_utility_necromancy",
                 sentence: "Learn about Occultism"),
+            new LocalizationSentence(
+                id: "_mod_cc_training_utility_druidism",
+                sentence: "Learn about Druidism"),
             new LocalizationSentence(
                 id: "_mod_cc_greeting_free_skill_lore",
                 sentence: "Me? Just a retired mercenary with decades of experience under my belt. Due to an injury, I can no longer work as one. Now spend my days teaching greenhorns how to survive in the wilderness and triumph on the battlefield. I can teach you how to survive in the wilderness as well, but not for free of course!"),

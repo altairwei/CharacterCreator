@@ -10,7 +10,7 @@ In details:
 - You start with all your stats at `10` but with an extra `3` to allocate wherever you want.
 - This npc can also teach you an extra if you have enough gold.
 
-If you play with the `Necromancy` mod, you will also have the choice to unlock the `Necromancy` skill tree.
+If you play with the `Necromancy` or the `Druidism` mod, you will also have the choice to unlock the `Necromancy` or the `Druidism` skill tree.
 
 ## Installation
 
