@@ -1,6 +1,6 @@
 ﻿// Copyright (C) 2024 Rémy Cases
 // See LICENSE file for extended copyright information.
-// This file is part of the repository CharacCreator from .
+// This file is part of the repository CharacCreator from https://github.com/remyCases/CharacterCreator.
 
 using ModShardLauncher;
 using ModShardLauncher.Mods;

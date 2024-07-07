@@ -58,18 +58,19 @@ Other mods I've made:
 - Stoneshard:
     - [Speedshard_Core](https://github.com/remyCases/SpeedshardCore)
     - [Speedshard_Sprint](https://github.com/remyCases/SpeedshardSprint)
-    - [Speedshard_Backpack](https://github.com/remyCases/SpeedshardBackpack)
     - [Speedshard_Skinning](https://github.com/remyCases/SpeedshardSkinning)
     - [Speedshard_MoneyDungeon](https://github.com/remyCases/SpeedshardMoneyDungeon)
     - [Speedshard_Stances](https://github.com/remyCases/SpeedshardStances)
     - [Pelt Durability](https://github.com/remyCases/Stoneshard-PeltDurability)
     - [MoreSaveSlots](https://github.com/remyCases/Stoneshard-MoreSaveSlots)
     - [Defeat Scenarios](https://github.com/remyCases/Stoneshard-DefeatScenarios)
+    - [Guaranteed Uniques](https://github.com/remyCases/GuaranteedUniques)
 
 - Shardpunk:
     - [Shardpunk-BiggerTeam](https://github.com/remyCases/Shardpunk-BiggerTeam)
     - [Shardpunk-Faster](https://github.com/remyCases/Shardpunk-Faster)
     - [Shardpunk-MoreSkillLevels](https://github.com/remyCases/Shardpunk-MoreSkillLevels)
+    - [Shardpunk-RandomParty](https://github.com/remyCases/Shardpunk-RandomParty)
 
 - Airship Kingdom Adrift:
     - [ProductionPanel](https://github.com/remyCases/AKAMod_ProdPanel)
