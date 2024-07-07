@@ -5,8 +5,6 @@
 using ModShardLauncher;
 using ModShardLauncher.Mods;
 using UndertaleModLib.Models;
-using UndertaleModTool;
-using System.Linq;
 
 namespace CharacCreator;
 public class CharacCreator : Mod
