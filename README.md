@@ -28,7 +28,8 @@ A [video](https://www.youtube.com/watch?v=_J0oJYGi38E&t=13s&ab_channel=Nylux) wa
 
 ### Using MSL
 
-- Download the latest `.sml` file released of [Character Creation](https://github.com/remyCases/CharacterCreator/releases).
+- Download the latest `.zip` of [Character Creation](https://github.com/remyCases/CharacterCreator/releases).
+- Unzip it, you should have two files.
 - Move the `CharacCreator.sml` in the `MSL/Mods` folder.
 - Run `ModShardLauncher.exe`.
 - Click on the anvil icon on the leftside.
