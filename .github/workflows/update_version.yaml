@@ -47,6 +47,7 @@ jobs:
     - uses: actions/checkout@v4
       with:
         fetch-depth: 0 # Get all history to allow automatic versioning using MinVer
+        ref: ${{ github.ref }}
 
     # Install the .NET SDK indicated in the global.json file
     - name: Setup .NET
@@ -60,7 +61,7 @@ jobs:
     - name: Run MSP
       run: |
         mkdir -p ${{ github.workspace }}/output
-        msp -f ${{ github.workspace }} -o ${{ github.workspace }}/output
+        msp -f ${{ github.workspace }} -o ${{ github.workspace }}/output -n CharacCreator
         zip -j ${{ github.event.repository.name }}.zip ${{ github.workspace }}/output/*.sml ${{ github.workspace }}/trainer.de2
 
     - uses: actions/upload-artifact@v3
