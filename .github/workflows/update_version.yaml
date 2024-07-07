@@ -61,7 +61,7 @@ jobs:
       run: |
         mkdir -p ${{ github.workspace }}/output
         msp -f ${{ github.workspace }} -o ${{ github.workspace }}/output
-        zip -D ${{ github.event.repository.name }}.zip ${{ github.workspace }}/output/*.sml ${{ github.workspace }}/trainer.de2
+        zip -j ${{ github.event.repository.name }}.zip ${{ github.workspace }}/output/*.sml ${{ github.workspace }}/trainer.de2
 
     - uses: actions/upload-artifact@v3
       with:
