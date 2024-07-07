@@ -23,7 +23,6 @@ A [video](https://www.youtube.com/watch?v=_J0oJYGi38E&t=13s&ab_channel=Nylux) wa
 
 - Download the latest release of [MSL](https://github.com/ModShardTeam/ModShardLauncher).
 - Unzip it.
-- **Move the `ModShard.dll` file to your Stoneshard folder.**
 - (Optional) Rename the data.win file in the Stoneshard folder with an other name so you'll have a backup if something went wrong.
 
 ### Using MSL
@@ -44,7 +43,7 @@ You can now play the game with the modded version !
 
 ## Troubleshooting
 
-If you encountered some troubles while trying to patch your game, first check if you **move the `ModShard.dll`** in the Stoneshard folder and the `trainer.de2` file in the `Stoneshard/dialogs` folder.
+If you encountered some troubles while trying to patch your game, first check if you **move the `trainer.de2`** in the `Stoneshard/dialogs` folder.
 
 Then you can contact me on [Discord](https://discord.com/users/200330865522376704), and send me the latest log file found in `MSL/logs`.
 
