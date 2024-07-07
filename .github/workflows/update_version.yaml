@@ -68,9 +68,9 @@ jobs:
         name: sml
         if-no-files-found: error
         retention-days: 7
-        path: ${{ github.event.repository.name }}.rar
+        path: ${{ github.event.repository.name }}.zip
   
     - name: Create Release
-      run: gh release create ${{ github.ref_name }} ${{ github.event.repository.name }}.rar
+      run: gh release create ${{ github.ref_name }} ${{ github.event.repository.name }}.zip
       env:
         GITHUB_TOKEN: ${{ github.TOKEN }}
