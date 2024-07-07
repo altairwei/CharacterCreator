@@ -18,7 +18,7 @@ jobs:
       - name: Find and Replace
         uses: jacobtomlinson/gha-find-replace@v3
         with:
-          find: \bVersion\s=>\s\"[\d\.]+
+          find: \bVersion\s=>\s"[\d\.]+
           replace: "Version => \"${{ github.ref_name }}"
           include: "CharacCreator.cs"
 
@@ -77,6 +77,6 @@ jobs:
         path: ${{ github.event.repository.name }}.zip
   
     - name: Create Release
-      run: gh release create v${{ github.ref_name }} ${{ github.event.repository.name }}.zip
+      run: gh release create ${{ github.ref_name }} -t "v${{ github.ref_name }}" ${{ github.event.repository.name }}.zip --generate-notes
       env:
         GITHUB_TOKEN: ${{ github.TOKEN }}
