@@ -7,8 +7,9 @@ This mod removes all skill trees learnt by default on all characters and adds a 
 In details:
 - You can choose up to two skill trees from `Weaponry` and `Sorcery`.
 - You can choose up to two skill trees from `Utility`.
-- You start with all your stats at `10` but with an extra `3` to allocate wherever you want.
-- This npc can also teach you an extra if you have enough gold.
+- You start with all your stats at `10` but with an extra `3` points to allocate wherever you want.
+- This npc can also teach you an extra if you have enough golds.
+- For `1000 golds` you can also reset all your ap, sp and learnt skills.
 
 If you play with the `Necromancy` or the `Druidism` mod, you will also have the choice to unlock the `Necromancy` or the `Druidism` skill tree.
 

@@ -11,7 +11,7 @@ public class CharacCreator : Mod
 {
     public override string Author => "zizani";
     public override string Name => "Character Creator";
-    public override string Description => "Create the character you ever wanted to play !";
+    public override string Description => "Create the character you always wanted to play !";
     public override string Version => "2.1.0";
     public override string TargetVersion => "0.8.2.10";
 
@@ -137,7 +137,7 @@ ds_list_destroy(_cc_skillstier1_list);
                 sentence: "Learn about Shields"),
             new LocalizationSentence(
                 id: "_mod_cc_training_weaponry_bow",
-                sentence: "Learn about Bows"),
+                sentence: "Learn about Ranged Weapons"),
             new LocalizationSentence(
                 id: "_mod_cc_training_sorcery_choice",
                 sentence: "Magic, huh?"),

@@ -17,9 +17,14 @@ function scr_mod_cc_reset_skills()
                         {
                             _learned_skills += 1;
                         }
-                        is_open = 0
-                    }
+                        is_open = false
 
+                        if (tier_to_open != -4)
+                        {
+                            is_lock = true;
+                            can_learn = false;
+                        }
+                    }
                 }
             }
         }
