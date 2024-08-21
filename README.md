@@ -1,5 +1,9 @@
 # Character Creation
 
+## Warning
+
+This mod is not compatible with old saves and require a new save. You may encounter some strange behaviour using the respec option while playing with an already used save.
+
 ## Description
 
 This mod removes all skill trees learnt by default on all characters and adds a new npc in the starting tavern that can teach you any skill tree.
