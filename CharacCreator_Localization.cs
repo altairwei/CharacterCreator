@@ -37,7 +37,7 @@ public static class CharacCreator_Localization
                 id: "_mod_cc_greeting_respec",
                 sentence: new Dictionary<ModLanguage, string>() {
                     {ModLanguage.English, "I want to do things differently (respec option)."},
-                    {ModLanguage.Chinese, "我想用不同的方式来做事（敬重选项）。"},
+                    {ModLanguage.Chinese, "我想做点改变（重新分配技能点）。"},
                     {ModLanguage.Russian, "Я хочу сделать все по-другому (перераспределить способности)."}
                 }
             ),
