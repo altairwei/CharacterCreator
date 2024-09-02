@@ -37,7 +37,7 @@ public static class CharacCreator_Localization
                 id: "_mod_cc_greeting_respec",
                 sentence: new Dictionary<ModLanguage, string>() {
                     {ModLanguage.English, "I want to do things differently (respec option)."},
-                    {ModLanguage.Chinese, "我想做点改变（重新分配技能点）。"},
+                    {ModLanguage.Chinese, "我想做点改变（洗点）。"},
                     {ModLanguage.Russian, "Я хочу сделать все по-другому (перераспределить способности)."}
                 }
             ),
@@ -45,7 +45,7 @@ public static class CharacCreator_Localization
                 id: "_mod_cc_respec_asking_for_money",
                 sentence: new Dictionary<ModLanguage, string>() {
                     {ModLanguage.English, "This is a pricey request !"},
-                    {ModLanguage.Chinese, "这是一个昂贵的要求！"},
+                    {ModLanguage.Chinese, "这可不便宜哦！"},
                     {ModLanguage.Russian, "Это дорогостоящий запрос!"}
                 }
             ),
@@ -317,7 +317,7 @@ public static class CharacCreator_Localization
                 id: "_mod_cc_greeting_free_skill_tutorial",
                 sentence: new Dictionary<ModLanguage, string>() {
                     {ModLanguage.English, "First of all, you will need a knife or any sharp weapon to harvest the pelt and meat. And if you're lucky, you'll also get a hunting trophy. Just remember to cook the meat at a campfire to avoid food poisoning. You could also make a bedroll out of the pelts, some rope, and straw."},
-                    {ModLanguage.Chinese, "首先，您需要一把刀或任何锋利的武器来收获皮毛和肉。如果幸运的话，你还能得到一个狩猎战利品。只是要记得在篝火上烤肉，以免食物中毒。您还可以用皮毛、绳子和稻草做一个床铺。"},
+                    {ModLanguage.Chinese, "首先，你需要一把刀或任何锋利的武器来收获皮毛和肉。如果幸运的话，你还能得到一个狩猎战利品。只是要记得在篝火上烤肉，以免食物中毒。你还可以用皮毛、绳子和稻草做一个床铺。"},
                     {ModLanguage.Russian, "Прежде всего, вам понадобится нож или любое острое оружие, чтобы собрать шкуру и мясо. Если повезет, вы также получите трофей охоты. Не забудьте приготовить мясо на костре, чтобы избежать отравления. Вы также можете сделать спальный мешок из шкур, веревки и соломы."}
                 }
             ),
