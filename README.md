@@ -17,6 +17,10 @@ In details:
 
 If you play with the `Necromancy` or the `Druidism` mod, you will also have the choice to unlock the `Necromancy` or the `Druidism` skill tree.
 
+## Supported Languages
+
+Currently this mod is available in English, Russian and Chinese.
+
 ## Installation
 
 Since this mod was made through MSL, you first need to install it and then patching the game with it.
@@ -55,6 +59,8 @@ Then you can contact me on [Discord](https://discord.com/users/20033086552237670
 ## Contributions and Thanks
 
 - `N` was the initial author of this mod, with his blessing I ported the mod on MSL.
+- `Altair` for the Chinese translation. 
+- `Pong` for the Russian translation.
 
 ## See also
 

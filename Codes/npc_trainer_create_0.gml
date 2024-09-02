@@ -1,9 +1,9 @@
 event_inherited()
 depth_add = 0
 idle_spr = spr
-name = "Old Mercenary"
 id_name = "npc_trainer"
-occupation = "trainer"
+occupation = "_mod_cc_trainer"
+name = ds_map_find_value(global.npc_info, occupation)
 subtype = "townee"
 avatar = 5067
 ds_list_clear(myfloor_list)
